@@ -12,7 +12,7 @@ function init(){
 	width = canvas.width;
 	height = canvas.height;
 	ctx = canvas.getContext('2d');
-	
+
 	window.onkeydown = keyLogger.keyDownListener;
 	window.onkeyup = keyLogger.keyUpListener;
 	
@@ -33,21 +33,28 @@ function init(){
 }
 
 function updateGame(dt){
-
+var img = new Image();
+img.src = "fondo1.jpg";
+ctx.drawImage(img,0, 0);
 	bullets.update(dt);
 	targets.update(dt);
 	player.update(dt);
 }
 
 function renderGame(){
-
+var img = new Image();
+img.src = "fondo1.jpg";
+ctx.drawImage(img, 0, 0);
 	renderBackground();
 	player.render(ctx);
 	bullets.render(ctx);
 	targets.render(ctx);
 }
 function renderBackground(){
-	ctx.fillStyle = "#c6c6c6";
-	ctx.fillRect(0,0,width,height);
+	
+        var img = new Image();
+img.src = "fondo1.jpg";
+ctx.drawImage(img, 0, 0);
+	
 }
 

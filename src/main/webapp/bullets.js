@@ -40,7 +40,7 @@ function Bullets(){
 	}
 	
 	this.render = function(ctx){
-		ctx.fillStyle = "#000000";
+		ctx.fillStyle = "#FF0000";
 		for(var i = 0;i < this.maxID;i++){
 			if(this.objects[i] == undefined) continue;
 			
@@ -48,6 +48,9 @@ function Bullets(){
 			ctx.beginPath();
 			ctx.arc(obj.x,obj.y,2,0,6.28);
 			ctx.fill();
+var img = new Image();
+img.src = "tiro.png";
+ctx.drawImage(img, this.x-5, this.y-5);
 		}
 	};
 	

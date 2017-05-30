@@ -10,7 +10,7 @@ function Player(){
 	this.lastShootTime = 0;
 	
 	
-	this.stats = {maxV:100,dAngle:0.03,acc:10,shootDelayMs:500};
+	this.stats = {maxV:100,dAngle:0.03,acc:10,shootDelayMs:100};
 	
 	this.update = function(dt){
 		if(keyLogger.keyStatus.up){
@@ -65,6 +65,9 @@ function Player(){
 		ctx.beginPath();
 		ctx.arc(this.x,this.y,10,0,6.28);
 		ctx.fill();
+var img = new Image();
+img.src = "nave.png";
+ctx.drawImage(img, this.x-65, this.y-65);
 	
 		ctx.strokeStyle="#FF0000";
 		ctx.beginPath();

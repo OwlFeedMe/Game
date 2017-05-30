@@ -92,8 +92,8 @@ score++;
 				size:25,
 				color:{
 					r:0,
-					g:0,
-					b:250,
+					g:250,
+					b:0,
 				}
 			});
 		}
@@ -121,10 +121,14 @@ score++;
 				obj.color.g,
 				obj.color.b
 			);
+
 			ctx.globalAlpha=obj.alpfa;
 			ctx.beginPath();
 			ctx.arc(obj.x,obj.y,obj.size * obj.scale,0,6.28);
 			ctx.fill();
+var img = new Image();
+img.src = "alien.png";
+ctx.drawImage(img, obj.x-65, obj.y-65);
 			ctx.globalAlpha=1;
 		}
 	};
