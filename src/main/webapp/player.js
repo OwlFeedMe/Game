@@ -10,7 +10,7 @@ function Player(){
 	this.lastShootTime = 0;
 	
 	
-	this.stats = {maxV:100,dAngle:0.03,acc:10,shootDelayMs:100};
+	this.stats = {maxV:100,dAngle:0.03,acc:10,shootDelayMs:500};
 	
 	this.update = function(dt){
 		
