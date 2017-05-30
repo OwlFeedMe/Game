@@ -77,9 +77,9 @@ score++;
 			if(
 				obj.x < 0 || obj.y < 0 ||
 				obj.x > width || obj.y > height
-				){
+				)
 			delete this.objects[i];
-}
+
 
 		}
 		
@@ -128,7 +128,7 @@ score++;
 			ctx.fill();
 var img = new Image();
 img.src = "alien.png";
-ctx.drawImage(img, obj.x-65, obj.y-65);
+ctx.drawImage(img, obj.x-45, obj.y-30,80,80);
 			ctx.globalAlpha=1;
 		}
 	};

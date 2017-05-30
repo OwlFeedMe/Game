@@ -10,25 +10,29 @@ function Player(){
 	this.lastShootTime = 0;
 	
 	
-	this.stats = {maxV:100,dAngle:0.03,acc:10,shootDelayMs:100};
+	this.stats = {maxV:100,dAngle:0.03,acc:10,shootDelayMs:200};
 	
 	this.update = function(dt){
+
 		if(keyLogger.keyStatus.up){
 		this.v += this.stats.acc;
 		if(this.v > this.stats.maxV)
 			this.v = this.stats.maxV;
 		}
+
 		if(keyLogger.keyStatus.down){
 			this.v -= this.stats.acc;
 			if(this.v < -this.stats.maxV)
 				this.v = -this.stats.maxV;
 		}
+
 		if(keyLogger.keyStatus.left){
 
 			this.angle -= this.stats.dAngle;
 			if(this.angle < 0){
 				this.angle += 2*Math.PI;}
 		}
+
 		if(keyLogger.keyStatus.right){
 
 			this.angle += this.stats.dAngle;
@@ -67,7 +71,8 @@ function Player(){
 		ctx.fill();
 var img = new Image();
 img.src = "nave.png";
-ctx.drawImage(img, this.x-65, this.y-65);
+
+ctx.drawImage(img, this.x-25, this.y-25,50,50);
 	
 		ctx.strokeStyle="#FF0000";
 		ctx.beginPath();

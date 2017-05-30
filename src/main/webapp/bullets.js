@@ -50,7 +50,7 @@ function Bullets(){
 			ctx.fill();
 var img = new Image();
 img.src = "tiro.png";
-ctx.drawImage(img, this.x-5, this.y-5);
+ctx.drawImage(img, obj.x-10, obj.y-10);
 		}
 	};
 	
