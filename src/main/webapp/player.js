@@ -13,7 +13,16 @@ function Player(){
 	this.stats = {maxV:100,dAngle:0.03,acc:10,shootDelayMs:500};
 	
 	this.update = function(dt){
-		
+		if(keyLogger.keyStatus.up){
+		this.v += this.stats.acc;
+		if(this.v > this.stats.maxV)
+			this.v = this.stats.maxV;
+		}
+		if(keyLogger.keyStatus.down){
+			this.v -= this.stats.acc;
+			if(this.v < -this.stats.maxV)
+				this.v = -this.stats.maxV;
+		}
 		if(keyLogger.keyStatus.left){
 
 			this.angle -= this.stats.dAngle;
