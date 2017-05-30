@@ -1,70 +1,20 @@
-
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 <html>
-    <head>
-         <link rel="icon" type="r/png" href="resources/iconoizi.png" />
-        <Script Language="JavaScript">
-             function mueveReloj(){ 
-   	momentoActual = new Date() 
-   	hora = momentoActual.getHours() 
-   	minuto = momentoActual.getMinutes() 
-   	segundo = momentoActual.getSeconds() 
+	<head>
+		<title>Burbujas</title>
+		<script src="keyLogger.js"></script>
+		<script src="player.js"></script>
+		<script src="bullets.js"></script>
+		<script src="targets.js"></script>
+		<script src="utils.js"></script>
+		<script src="main.js"></script>
+	</head>
+	<body onload="init();">
 
-   	horaImprimible = hora + " : " + minuto + " : " + segundo 
-
-   	
-        if (minuto < 10) {
-                    if (hora == 22 && minuto < 51 && minuto > 29) {
-                        document.index.reloj.value = "Son las " +horaImprimible+ " y te dire algo";
-                        document.getElementById("myBtn").value= "espichame";
-                        document.getElementById("myBtn").disabled = false;
-                    } else {
-                        document.index.reloj.value = "Son las " +horaImprimible;
-                        document.getElementById("myBtn").value= "Aun no";
-                        document.getElementById("myBtn").disabled = true;
-                    }
-                } else {
-                    if (hora == 22 && minuto < 51 && minuto > 29) {
-                       document.index.reloj.value = "Son las " +horaImprimible + " y te dire algo:";
-                       document.getElementById("myBtn").value= "espichame";
-                       document.getElementById("myBtn").disabled = false;
-                    } else {
-                        document.index.reloj.value = "Son las " + horaImprimible;
-                        document.getElementById("myBtn").value= "Aun no";
-                        document.getElementById("myBtn").disabled = true;
-                    }
-                }
-
-   	setTimeout("mueveReloj()",1000) 
-} 
-        </Script> 
-        <meta http-equiv= content-type content= text/html charset=utf-8 />
-        <title>Holaaaa pollita</title>
-    </head>
-    <body background="resources/fondo1.jpg" bgcolor="FFCECB" style="background-repeat: no-repeat; background-position: center top;" onload="mueveReloj()">
-        <form style="width: 75%;margin:auto;" action="index" name="index" method="post">
-            <table style="text-align: left; width: 100%;" border="0"
-                   cellpadding="2" cellspacing="2">
-
-                <tr align="center">
-
-<center><input input type="text" name="reloj" size="30" style="background-color : Black; color : White; font-family : Verdana, Arial, Helvetica; font-size : 16pt; text-align : center;" onfocus="window.document.form_reloj.reloj.blur()> </center>
-                </tr>
-                <tr align="center">
-                    <td><input id="myBtn" name="Boton" value="espichame"
-                               type="submit"></td>
-                </tr>
-                <tr align="center">
-                    <td><input name="Boton" value="dias pasados"
-                               type="submit"></td>
-                </tr>
+               <input input type="text" name="score" id="PUNTOS" >
+<br>
 
 
-               
-                </tbody>
-            </table>
-            <br>
-        </form>
-    </body>
+		<canvas id="canvas" width="500" height="500">
+
+	</body>
 </html>
-
