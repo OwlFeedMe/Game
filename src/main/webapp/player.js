@@ -37,7 +37,8 @@ function Player(){
 		}
 		
 		
-		
+		if(!(keyLogger.keyStatus.up || keyLogger.keyStatus.down))
+			this.v *= 0.99;
 		this.vx = this.v * Math.cos(this.angle);
 		this.vy = this.v * Math.sin(this.angle);
 		
